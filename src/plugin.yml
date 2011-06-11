@@ -1,0 +1,9 @@
+name: Tables
+main: com.webkonsept.bukkit.tables.Tables
+version: 0.1
+website: http://minecraft.webkonsept.com/
+author: Fredrik Vold
+database: false
+description: >
+        Allows pressure plates to be placed on top of any block, including fence posts.
+commands:
