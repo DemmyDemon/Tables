@@ -5,5 +5,5 @@ website: http://minecraft.webkonsept.com/
 author: Fredrik Vold
 database: false
 description: >
-        Allows pressure plates to be placed on top of any block, including fence posts.
+        Allows pressure plates to be placed on top of including fence posts and glass.
 commands:
