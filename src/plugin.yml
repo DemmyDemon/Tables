@@ -1,9 +1,16 @@
 name: Tables
 main: com.webkonsept.bukkit.tables.Tables
-version: 0.1
-website: http://minecraft.webkonsept.com/
+version: 0.2
+website: http://minecraft.webkonsept.com/plugins/details/Tables.jar
+location: http://minecraft.webkonsept.com/plugins/download/Tables.jar
 author: Fredrik Vold
 database: false
-description: >
-        Allows pressure plates to be placed on top of any block, including fence posts.
+description: Allows pressure plates to be placed on top of fence posts, glass etc.
 commands:
+bukget: true
+thread: http://forums.bukkit.org/threads/Tables.20923/
+build:
+    min: 860
+    max: 928
+categories:
+    - MECH
