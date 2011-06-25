@@ -25,10 +25,12 @@ public class Tables extends JavaPlugin {
 		place.clear();
 		place.add(Material.WOOD_PLATE);
 		place.add(Material.STONE_PLATE);
+		place.add(Material.FENCE);
 		
 		onTopOf.clear();
 		onTopOf.add(Material.FENCE);
 		onTopOf.add(Material.GLASS);
+		onTopOf.add(Material.AIR);
 		
 		out("Enabled");
 	}
