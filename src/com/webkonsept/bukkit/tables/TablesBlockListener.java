@@ -16,9 +16,10 @@ public class TablesBlockListener extends BlockListener {
 	
 	public void onBlockCanBuild (BlockCanBuildEvent event){
 		if (!plugin.isEnabled()) return;
+		
 		Material placing = event.getMaterial();
+		Block thisBlock = event.getBlock();
 		if (plugin.place.contains(placing)){
-			Block thisBlock = event.getBlock();
 			Block belowBlock = thisBlock.getFace(BlockFace.DOWN);
 			if (thisBlock.getType().equals(Material.AIR)){
 				if (plugin.onTopOf.contains(belowBlock.getType())){
@@ -27,11 +28,15 @@ public class TablesBlockListener extends BlockListener {
 			}
 		}
 	}
+	
+	@Override
 	public void onBlockPhysics (BlockPhysicsEvent event){
 		if (!plugin.isEnabled()) return;
+		
 		Block affected = event.getBlock();
 		if (plugin.place.contains(affected.getType())){
-			if (plugin.onTopOf.contains(affected.getFace(BlockFace.DOWN).getType())){
+			Material below = affected.getFace(BlockFace.DOWN).getType();
+			if (plugin.onTopOf.contains(below)){
 				event.setCancelled(true);
 			}
 		}

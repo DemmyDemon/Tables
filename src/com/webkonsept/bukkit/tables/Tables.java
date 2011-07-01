@@ -12,26 +12,25 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Tables extends JavaPlugin {
 	private Logger log = Logger.getLogger("Minecraft");
-	private TablesBlockListener blockListener = new TablesBlockListener(this);
-	public HashSet<Material> place = new HashSet<Material>();
-	public HashSet<Material> onTopOf = new HashSet<Material>();
+	protected TablesBlockListener blockListener = new TablesBlockListener(this);
+	
+	protected HashSet<Material> place = new HashSet<Material>();
+	protected HashSet<Material> onTopOf = new HashSet<Material>();
+	
 	
 	@Override
 	public void onEnable() {
 		PluginManager pm =getServer().getPluginManager();
-		pm.registerEvent(Event.Type.BLOCK_CANBUILD,blockListener,Priority.Normal,this);
-		pm.registerEvent(Event.Type.BLOCK_PHYSICS,blockListener,Priority.Normal,this);
+		pm.registerEvent(Event.Type.BLOCK_CANBUILD	,blockListener	,Priority.Normal	,this);
+		pm.registerEvent(Event.Type.BLOCK_PHYSICS	,blockListener	,Priority.Normal	,this);
 		
 		place.clear();
 		place.add(Material.WOOD_PLATE);
 		place.add(Material.STONE_PLATE);
-		place.add(Material.FENCE);
 		
 		onTopOf.clear();
 		onTopOf.add(Material.FENCE);
 		onTopOf.add(Material.GLASS);
-		onTopOf.add(Material.AIR);
-		
 		out("Enabled");
 	}
 	@Override
