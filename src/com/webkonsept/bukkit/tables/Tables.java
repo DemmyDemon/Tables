@@ -27,6 +27,7 @@ public class Tables extends JavaPlugin {
 		place.clear();
 		place.add(Material.WOOD_PLATE);
 		place.add(Material.STONE_PLATE);
+		place.add(Material.CAKE);
 		
 		onTopOf.clear();
 		onTopOf.add(Material.FENCE);
