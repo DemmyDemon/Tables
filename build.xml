@@ -3,9 +3,9 @@
 <!DOCTYPE project [
        <!ENTITY common SYSTEM "common.xml">
 ]>
-<project name="Tables" default="deploy">
+<project name="Tables" default="testing">
 	<path id="class.path">
-		<fileset dir="./libs/" includes="*.jar" />
+		<fileset dir="../libs/" includes="*.jar" />
   	</path>
   	<target name="compile">
   		<mkdir dir="./bin"/>
@@ -15,7 +15,7 @@
     		destdir="./bin"
     	/>
   	</target>
-  	<target name="jar" depends="compile">
+  	<target name="jar" depends="clean,compile">
   		<copy
   			file="./src/plugin.yml"
   			tofile="./bin/plugin.yml"
@@ -30,23 +30,22 @@
     		dir="bin/" 
     	/>
   	</target>
-	<target name="deploy" depends="jar,clean">
+	<target name="deploy" depends="jar">
 		<copy 
 			file="${ant.project.name}.jar"
 			tofile="W:/server/plugins/${ant.project.name}.jar"
 		/>
 	</target>
-	<target name="testing" depends="jar,clean">
+	<target name="testing" depends="jar">
 		<copy
 			file="${ant.project.name}.jar"
 			tofile="C:/Users/Fredrik/Desktop/Minecraft/Server/plugins/${ant.project.name}.jar"
 		/>
 	</target>
-   <target name="publish" depends="clean,jar">
+   <target name="publish" depends="jar">
         <copy
           file="${ant.project.name}.jar"
           tofile="W:/publish/${ant.project.name}.jar"
         />
     </target>
-  	<target name="buildJar" depends="jar,clean" />
 </project>
