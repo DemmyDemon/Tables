@@ -24,6 +24,12 @@ public class Tables extends JavaPlugin {
 	                add(Material.GLASS);
 	                add(Material.THIN_GLASS);
 	                add(Material.IRON_FENCE);
+	                add(Material.WOOD_STAIRS);
+	                add(Material.COBBLESTONE_STAIRS);
+	                add(Material.BRICK_STAIRS);
+	                add(Material.SMOOTH_STAIRS);
+	                add(Material.NETHER_BRICK_STAIRS);
+	                
 	            }
 	        });
 	        
@@ -33,6 +39,11 @@ public class Tables extends JavaPlugin {
                     add(Material.GLASS);
                     add(Material.THIN_GLASS);
                     add(Material.IRON_FENCE);
+                    add(Material.WOOD_STAIRS);
+                    add(Material.COBBLESTONE_STAIRS);
+                    add(Material.BRICK_STAIRS);
+                    add(Material.SMOOTH_STAIRS);
+                    add(Material.NETHER_BRICK_STAIRS);
 	            }
 	        });
 	        
